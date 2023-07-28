@@ -20,7 +20,6 @@ export default function App() {
 		if (emojiMeaning === undefined) {
 			emojiMeaning = "Sorry this emoji is not available in our emoji world";
 		}
-
 		setEmojiMeaning(emojiMeaning);
 	};
 
