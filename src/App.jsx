@@ -17,12 +17,12 @@ export default function App() {
 
 	const emojiInput = (e) => {
 		var inputChange = e.target.value;
-		var emojiMeaning = emojiDictionary[inputChange];
+		var emojiMean = emojiDictionary[inputChange];
 
-		if (emojiMeaning === undefined) {
-			emojiMeaning = "undefined";
+		if (emojiMean === undefined) {
+			emojiMean = "Emoji not found";
 		}
-		setEmojiMeaning(emojiMeaning);
+		setEmojiMeaning(emojiMean);
 		console.log(inputChange);
 	};
 
