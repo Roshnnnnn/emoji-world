@@ -19,15 +19,16 @@ export default function App() {
 		var inputChange = e.target.value;
 		var emojiMeaning = emojiDictionary[inputChange];
 
-		// if (emojiMeaning === undefined) {
-		//   emojiMeaning = "";
-		// }
+		if (emojiMeaning === undefined) {
+			emojiMeaning = "undefined";
+		}
 		setEmojiMeaning(emojiMeaning);
+		console.log(inputChange);
 	};
 
 	const emojiName = (emoji) => {
 		var item = emojiDictionary[emoji];
-		setEmojiMeaning(item);
+		setEmojiMeaning(item || "Emoji not found");
 	};
 
 	return (
@@ -45,6 +46,7 @@ export default function App() {
 				</span>
 			))}
 			<h2>{emojiMeaning}</h2>
+			{/* <h2>{emojiData}</h2> */}
 		</div>
 	);
 }
